@@ -8,7 +8,6 @@
 }
 input {
     padding: 5px;
-    font-weight: bold;
 }
 input[type="text"]:focus {
     outline: blue;
