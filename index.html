@@ -14,7 +14,49 @@
 </head>
 
 <body>
-   
+     <!-- Header of the page -->
+     <header>
+        <h1 class="text-center text-warning my-4 fw-bold">Money Manager 	
+            &#128176;</h1>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="row mx-2 mx-md-5 align-items-center">
+            <div class="main-image col-12 col-md-7 border border-warning gx-5 bg-light">
+                <img class="img-fluid rounded" src="images/money-with-calculator.jpg" alt="Money With Calculator">
+            </div>
+            <div class="calculation col-12 col-md-5 text-center bg-light p-2 gx-5 mt-4 mt-md-0">
+                <div class="income">
+                    <h5 class="my-4">Income</h5>
+                    <div class="row d-flex align-items-center mx-auto justify-content-center">
+                        <span class="col-3">Income:</span>
+                        <input class="col-6 border-0 bg-custom rounded " type="text" name="income" id="income-field">
+                    </div>
+                </div>
+
+                <div class="expenses">
+                    <h5 class="my-4">Expenses</h5>
+                    <div class="row d-flex align-items-center mx-auto justify-content-center">
+                        <span class="col-3">Food:</span>
+                        <input class="col-6 border-0 bg-custom rounded " type="text" name="food" id="food-field">
+                    </div>
+                    <div class="row d-flex align-items-center mx-auto justify-content-center mt-2">
+                        <span class="col-3">Rent:</span>
+                        <input class="col-6 border-0 bg-custom rounded" type="text" name="rent" id="rent-field">
+                    </div>
+                    <div class="row d-flex align-items-center mx-auto justify-content-center mt-2">
+                        <span class="col-3">Clothes:</span>
+                        <input class="col-6 border-0 bg-custom rounded" type="text" name="clothes" id="clothes-field">
+                    </div>
+                    <button id="calculate" class="btn text-white btn-warning py-2 px-5 fw-bold my-3">Calculate</button>
+                    <h5>Total Expenses: <span id="total-expenses">5500</span></h5>
+                </div>
+              
+            </div>
+        </section>
+    </main>
+
 
 
     <!-- Javascript -->
