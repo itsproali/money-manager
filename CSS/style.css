@@ -3,17 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+.bg-body {
+    background-color: #0a3d25 !important;
+}
 .bg-custom {
     background-color: lightgray;
+}
+.main-image img{
+    width: 100%;
+    height: 100%;
 }
 input {
     padding: 5px;
 }
-input:focus {
-    outline: blue !important;
-    /* border: 2px solid blue !important; */
+.focus:focus {
+    outline: 2px solid green !important;
+}
+#balance-error, #nan-error, #saving-error {
+    display: none;
+    color: red;
 }
 .save input {
     width: 20%;
-    margin:  0 1%;
 }

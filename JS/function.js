@@ -24,6 +24,8 @@ function getTotalExpenses() {
     const rentAmount = parseInt(rentField.value);
     const clothesAmount = parseInt(clothesField.value);
     totalExpenses.innerText = foodAmount + rentAmount + clothesAmount;
+    document.getElementById('balance-error').style.display = 'none';
+    document.getElementById('nan-error').style.display = 'none';
 }
 
 // Get Balance
@@ -36,8 +38,9 @@ function getBalance() {
 // Saving Amount & Remaining Balance
 saveButton.addEventListener('click', function () {
     const savingAmountNumber = parseInt(incomeField.value) / 100 * parseInt(savingField.value);
-    savingAmount.innerText = savingAmountNumber.toFixed(2);
+    savingAmount.innerText = savingAmountNumber.toFixed();
     remainingBalance.innerText = parseInt(balance.innerText) - parseInt(savingAmount.innerText);
+    document.getElementById('saving-error').style.display = 'none';
     getError('saving');
 });
 
@@ -52,9 +55,15 @@ function getError(useField) {
         alert("You can't enter any empty field!! Please fill out all the input field")
     }
     else if (incomeFieldAmount < 0 || foodFieldAmount < 0 || rentFieldAmount < 0 || clothesFieldAmount < 0 || savingFieldAmount < 0) {
-        alert('Please enter greater than 0')
+        alert('Please enter a valid Number')
     }
     else if (isNaN(totalExpenses.innerText) || isNaN(balance.innerText) || isNaN(savingAmount.innerText)) {
-        alert('Please enter a valid Number')
+        document.getElementById('nan-error').style.display = 'block';
+    }
+    else if (incomeFieldAmount < totalExpenses.innerText) {
+        document.getElementById('balance-error').style.display = 'block';
+    }
+    else if ((useField == 'saving') && Number(balance.innerText) < Number(savingAmount.innerText)) {
+        document.getElementById('saving-error').style.display = 'block';
     }
 }

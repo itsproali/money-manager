@@ -14,41 +14,43 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-<body>
+<body class="bg-body">
      <!-- Header of the page -->
      <header>
-        <h1 class="text-center my-4 fw-bold"><span class="text-warning">Money</span> Manager 	
+        <h1 class="text-center my-4 fw-bold text-white"><span class="text-warning">Money</span> Manager 	
             &#128176;</h1>
     </header>
 
     <!-- Main Section -->
-    <main class="">
-        <section class="container mx-auto row align-items-center gx-3">
+    <main class="mb-5">
+        <section class="container mx-auto row align-items-stretch">
             <div class="main-image col-12 col-md-7">
-                <img class="img-fluid rounded" src="images/money-calculation-copy.jpg" alt="Money With Calculator">
+                <img class="rounded" src="images/money-calculation-copy.jpg" alt="Money With Calculator">
             </div>
-            <div id="calculation" class="col-12 col-md-5 text-center bg-light p-1 p-md-4 mt-4 mt-md-0 rounded">
+            <div id="calculation" class="col-12 col-md-5 text-center bg-light p-1 p-md-1 mt-3 mt-md-0 rounded">
                 <div class="income">
                     <h5 class="my-4">Income</h5>
                     <div class="row d-flex align-items-center mx-auto justify-content-center">
-                        <span class="col-3">Income:</span>
-                        <input class="col-6 border-0 bg-custom rounded " type="text" name="income" id="income-field">
+                        <span class="col-12 col-sm-3">Income:</span>
+                        <input class="col-6 border-0 bg-custom focus rounded " type="text" name="income" id="income-field">
                     </div>
                 </div>
 
                 <div class="expenses">
-                    <h5 class="my-4">Expenses</h5>
+                    <h5 class="my-3">Expenses</h5>
                     <div class="row d-flex align-items-center mx-auto justify-content-center">
-                        <span class="col-3">Food:</span>
-                        <input class="col-6 border-0 bg-custom rounded " type="text" name="food" id="food-field">
+                        <span class="col-12 col-sm-3">Food:</span>
+                        <input class="col-6 border-0 bg-custom focus rounded " type="text" name="food" id="food-field">
                     </div>
                     <div class="row d-flex align-items-center mx-auto justify-content-center mt-2">
-                        <span class="col-3">Rent:</span>
-                        <input class="col-6 border-0 bg-custom rounded" type="text" name="rent" id="rent-field">
+                        <span class="col-12 col-sm-3">Rent:</span>
+                        <input class="col-6 border-0 bg-custom focus rounded" type="text" name="rent" id="rent-field">
                     </div>
                     <div class="row d-flex align-items-center mx-auto justify-content-center mt-2">
-                        <span class="col-3">Clothes:</span>
-                        <input class="col-6 border-0 bg-custom rounded" type="text" name="clothes" id="clothes-field">
+                        <span class="col-12 col-sm-3">Clothes:</span>
+                        <input class="col-6 border-0 bg-custom focus rounded" type="text" name="clothes" id="clothes-field">
+                        <p id="balance-error" class="mt-1">* Please decrease your expenses.</p>
+                        <p id="nan-error" class="mt-1">* Please enter a valid number !!</p>
                     </div>
                     <button id="calculate" class="btn text-white btn-success py-2 px-5 fw-bold my-3">Calculate</button>
                     <h5 class="mb-4">Total Expenses: <span id="total-expenses">00</span></h5>
@@ -56,10 +58,11 @@
                 <h5>Balance: <span id="balance">00</span></h5>
                 <div class="save d-flex align-items-center justify-content-around my-3">
                         <span>Save: </span>
-                        <input class="col-6 border-0 bg-custom rounded text-center py-2" type="text" name="food" id="saving-field" value="0">
+                        <input class="col-6 border-0 bg-custom focus rounded text-center py-2" type="text" name="food" id="saving-field" value="0">
                         <span class="px-2">%</span>
-                        <button id="save"  class="btn text-white btn-success py-2 px-5 fw-bold">Save</button>
+                        <button id="save"  class="btn text-white btn-success py-2 px-3 px-sm-5 fw-bold">Save</button>
                 </div>
+                <p id="saving-error" class="mt-1">* You don't have enough money to save !!</p>
                 <h5 class="mb-4">Saving Amount: <span id="saving-amount">00</span></h5>
                 <h5>Remaining Balance: <span id="remaining-balance">00</span></h5>
             </div>
