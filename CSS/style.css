@@ -1,9 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+/* Custom Styles */
 .bg-body {
+    font-family: 'Oswald', sans-serif;
     background-color: #0a3d25 !important;
 }
 .bg-custom {
@@ -19,7 +19,7 @@ input {
 .focus:focus {
     outline: 2px solid green !important;
 }
-#balance-error, #nan-error, #saving-error {
+#balance-error, #nan-error, #saving-error, #saving-error-2 {
     display: none;
     color: red;
 }

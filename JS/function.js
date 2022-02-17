@@ -41,6 +41,7 @@ saveButton.addEventListener('click', function () {
     savingAmount.innerText = savingAmountNumber.toFixed();
     remainingBalance.innerText = parseInt(balance.innerText) - parseInt(savingAmount.innerText);
     document.getElementById('saving-error').style.display = 'none';
+    document.getElementById('saving-error-2').style.display = 'none';
     getError('saving');
 });
 
@@ -57,9 +58,12 @@ function getError(useField) {
     else if (incomeFieldAmount < 0 || foodFieldAmount < 0 || rentFieldAmount < 0 || clothesFieldAmount < 0 || savingFieldAmount < 0) {
         alert('Please enter a valid Number')
     }
-    else if (isNaN(totalExpenses.innerText) || isNaN(balance.innerText) || isNaN(savingAmount.innerText)) {
+    else if (isNaN(totalExpenses.innerText) || isNaN(balance.innerText)) {
         document.getElementById('nan-error').style.display = 'block';
     }
+    else if (isNaN(savingAmount.innerText)) {
+        document.getElementById('saving-error-2').style.display = 'block'
+        }
     else if (incomeFieldAmount < totalExpenses.innerText) {
         document.getElementById('balance-error').style.display = 'block';
     }
