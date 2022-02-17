@@ -26,14 +26,14 @@ function getTotalExpenses() {
     totalExpenses.innerText = foodAmount + rentAmount + clothesAmount;
     document.getElementById('balance-error').style.display = 'none';
     document.getElementById('nan-error').style.display = 'none';
-}
+};
 
 // Get Balance
 function getBalance() {
     const incomeAmount = parseInt(incomeField.value);
     const expensesAmount = parseInt(totalExpenses.innerText);
     balance.innerText = incomeAmount - expensesAmount;
-}
+};
 
 // Saving Amount & Remaining Balance
 saveButton.addEventListener('click', function () {
@@ -66,4 +66,4 @@ function getError(useField) {
     else if ((useField == 'saving') && Number(balance.innerText) < Number(savingAmount.innerText)) {
         document.getElementById('saving-error').style.display = 'block';
     }
-}
+};
