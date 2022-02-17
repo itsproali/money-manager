@@ -17,17 +17,17 @@
 <body>
      <!-- Header of the page -->
      <header>
-        <h1 class="text-center text-warning my-4 fw-bold">Money Manager 	
+        <h1 class="text-center my-4 fw-bold"><span class="text-warning">Money</span> Manager 	
             &#128176;</h1>
     </header>
 
     <!-- Main Section -->
-    <main class=" mx-2 mx-md-5">
-        <section class="row align-items-center gx-3">
+    <main class="">
+        <section class="container mx-auto row align-items-center gx-3">
             <div class="main-image col-12 col-md-7">
-                <img class="img-fluid rounded" src="images/vector.jpg" alt="Money With Calculator">
+                <img class="img-fluid rounded" src="images/money-calculation-copy.jpg" alt="Money With Calculator">
             </div>
-            <div class="calculation col-12 col-md-5 text-center bg-light p-2 mt-4 mt-md-0 rounded">
+            <div class="calculation col-12 col-md-5 text-center bg-light p-1 p-md-4 mt-4 mt-md-0 rounded">
                 <div class="income">
                     <h5 class="my-4">Income</h5>
                     <div class="row d-flex align-items-center mx-auto justify-content-center">
@@ -50,15 +50,15 @@
                         <span class="col-3">Clothes:</span>
                         <input class="col-6 border-0 bg-custom rounded" type="text" name="clothes" id="clothes-field">
                     </div>
-                    <button id="calculate" class="btn text-white btn-warning py-2 px-5 fw-bold my-3">Calculate</button>
+                    <button id="calculate" class="btn text-white btn-success py-2 px-5 fw-bold my-3">Calculate</button>
                     <h5 class="mb-4">Total Expenses: <span id="total-expenses">00</span></h5>
                 </div>
                 <h5>Balance: <span id="balance">00</span></h5>
-                <div class="save d-flex align-items-center justify-content-center">
+                <div class="save d-flex align-items-center justify-content-evenly my-3">
                         <span>Save: </span>
                         <input class="col-6 border-0 bg-custom rounded text-center py-2" type="text" name="food" id="saving-field">
                         <span class="px-2">%</span>
-                        <button id="save"  class="btn text-white btn-warning py-2 px-5 fw-bold my-3">Save</button>
+                        <button id="save"  class="btn text-white btn-success py-2 px-5 fw-bold">Save</button>
                 </div>
                 <h5 class="mb-4">Saving Amount: <span id="saving-amount">00</span></h5>
                 <h5>Remaining Balance: <span id="remaining-balance">00</span></h5>

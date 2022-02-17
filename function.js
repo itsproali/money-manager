@@ -31,3 +31,10 @@ function getBalance() {
     const expensesAmount = parseInt(totalExpenses.innerText);
     balance.innerText = incomeAmount - expensesAmount;
 }
+
+// Saving Amount & Remaining Balance
+saveButton.addEventListener('click', function () {
+    const savingAmountNumber = parseInt(incomeField.value) / 100 * parseInt(savingField.value);
+    savingAmount.innerText = savingAmountNumber;
+    remainingBalance.innerText = parseInt(balance.innerText) - parseInt(savingAmount.innerText); 
+});
