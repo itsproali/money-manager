@@ -9,8 +9,9 @@
 input {
     padding: 5px;
 }
-input[type="text"]:focus {
-    outline: blue;
+input:focus {
+    outline: blue !important;
+    /* border: 2px solid blue !important; */
 }
 .save input {
     width: 20%;
